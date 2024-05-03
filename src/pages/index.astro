@@ -1,0 +1,922 @@
+---
+import '../components/Head.astro'
+import Layout from '../layouts/Layout.astro';
+
+---
+<Layout title='Tecnodespegue'
+<body>
+    <!-- Start site wrapper -->
+    <div class="site-wrapper">
+        <div  class="header-index">
+            <!-- ====== 1.1. Header section ====== -->
+            <header>
+                <nav class="container navbar">
+                    <div class="container-nav flex">
+                        <!-- site logo -->
+                        <a class="navbar-logo" href="/"><img src="/Images/Tecno.svg" alt="logo de tecnodespegue"></a>
+                        <button class="navbar-toggler" onclick="openNav()" type="button">
+                            <span class="fa-solid fa-bars"></span>
+                        </button>
+                        <!-- menus -->
+                        <ul class="navbar-nav flex">
+                            <li><a class="nav-link active" href="/">Home</a></li>
+                            <li><a class="nav-link" href="#about">About</a></li>
+                            <li><a class="nav-link" href="#contact">Contact</a></li>
+                            <li><a class="nav-link" href="https://tecno-blog.com">Blog</a></li>
+                            <li class="dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#service">Services</a></li>
+                                    <li><a class="dropdown-item" href="#pricing">Pricing Plan</a></li>
+                                    <li><a class="dropdown-item" href="#portfolio">Portfolio</a></li>
+                                    <li><a class="dropdown-item" href="#team">Team</a></li>
+                                    <li><a class="dropdown-item" href="#faq">FAQ</a></li>
+                                    <li><a class="dropdown-item" href="https://tecno-blog.com">Blog</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex nav-right">
+                        <i onclick="open_right_side()" class="fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+                <!-- Sidebar -->
+                <aside id="mySidepanel" class="sidepanel">
+                    <div class="sidebar flex">
+                        <a href=""><img src="Images/Tecno2.webp" alt="logo"></a>
+                        <button class="closebtn btn_hover1" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div>
+                        <!-- side menus -->
+                        <ul>
+                            <li><a class="nav-link active" href="/index.html" onclick="closeNav()">Home</a></li>
+                            <li><a class="nav-link" href="#about" onclick="closeNav()">About</a></li>
+                            <li><a class="nav-link" href="#contact" onclick="closeNav()">Contact</a></li>
+                            <li><a class="nav-link" href="#service" onclick="closeNav()">Services</a></li>
+                            <li><a class="nav-link" href="#pricing" onclick="closeNav()">Pricing Plan</a></li>
+                            <li><a class="nav-link" href="#portfolio" onclick="closeNav()">Portfolio</a></li>
+                            <li><a class="nav-link" href="#team" onclick="closeNav()">Team</a></li>
+                            <li><a class="nav-link" href="#faq" onclick="closeNav()">FAQ</a></li>
+                            <li><a class="nav-link" href="https://tecnodespegue.com" onclick="closeNav()">Blog</a></li>
+                            <li class="collapse_btn">
+                                <a class="nav-link plus_collapse" data-bs-toggle="collapse" href="javascript:void(0);" onclick="toggleCollapse('pages'); closeNav()" aria-expanded="false" aria-controls="pages">
+                                </a>
+                                <div class="collapse" id="pages">
+                                    <ul>
+                                        <li><a class="nav-link" href="services.html" onclick="closeNav()">Services</a></li>
+                                        <li><a class="nav-link" href="pricing.html" onclick="closeNav()">Pricing Plan</a></li>
+                                        <li><a class="nav-link" href="portfolio.html" onclick="closeNav()">Portfolio</a></li>
+                                        <li><a class="nav-link" href="team.html" onclick="closeNav()">Team</a></li>
+                                        <li><a class="nav-link" href="faq.html" onclick="closeNav()">FAQ</a></li>
+                                        <li><a class="nav-link" href="blog.html" onclick="closeNav()">Blog</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- Right Sidebar -->
+                <section class="header-right-sidebar" id="right_side">
+                    <div class="flex flex-sb">
+                        <a href="/"><img src="Images/Tecno2.webp" alt="logo de tecnodespegue"></a>
+                        <button class="close_right_sidebar fa-solid fa-xmark" onclick="close_right_sade()"> </button>
+                    </div>
+                    <p>Servicios digitales construyendo tu imperio en la red.
+                    </p>
+                    <a href="/about.html" class="btn_hover1">Descubrir más</a>
+                    <hr>
+                    <h4>Contactate con nosotros:</h4>
+                    <ul class="flex">
+                        <li>
+                            <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                            <a href="#" class="text-lowercase">+54 2334-409838</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa-regular fa-envelope"></i></a>
+                            <a href="#">tecnodespegue@outlook.com</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa-sharp fa-regular fa-clock"></i></a>
+                            <a href="#">Horarios de oficina: 8AM - 8PM de lunes a virnes -
+                                Sabados de 8AM - 12PM </a>
+                        </li>
+                    </ul>
+                    <span class="flex">
+                        <a href="https://www.facebook.com/TecnoDespegueLive"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/tecnodespegue/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/REPARO22"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/ren%C3%A9-kuhm-1aa88818a/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </span>
+                </section>
+            </header>
+            <!-- ====== End of 1.1. Header section ====== -->
+            <!-- ====== 1.2. hero section ====== -->
+            <section id="hero" class="hero">
+                <div class="container" data-aos="zoom-in">
+                    <div>
+                        <div class="hero-social-icon flex">
+                            <a href="https://www.facebook.com/TecnoDespegueLive"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/tecnodespegue/"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://twitter.com/REPARO22"><i class="fa-brands fa-twitter"></i></a>
+                            <hr class="d-md-block d-sm-none d-none">
+                        </div>
+                        <div class="center-data">
+                            <h1>SERVICIOS DIGITALES</h1>
+                            <h3>CONSTRUYENDO TU IMPERIO EN LA RED</h3>
+                            <div class="center-btn flex">
+                                <a href="#service" class="btn_hover1">Empezar</a>
+                                <a href="#about" class="btn_hover2">Descubrir más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ====== End of 1.2. hero section ====== -->
+        </div>
+        <!-- ====== 1.3. card section ====== -->
+        <section id="feature" class="feature">
+            <div class="container">
+                <div class="flex">
+                    <div class="header-card" data-aos="fade-up">
+                        <div>
+                            <figure><img src="/Images/icon/feature1.webp" class="feature-img1" alt="feature"></figure>
+                            <h4>soluciones personalizadas</h4>
+                            <p>En un mercado exigente, las soluciones personalizadas son clave. Diseñadas para cumplir
+                                con las necesidades específicas de cada cliente, estas estrategias garantizan eficacia y
+                                relevancia, posicionando a las empresas un paso adelante en su sector.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="header-card" data-aos="fade-down">
+                        <div>
+                            <figure><img src="Images/icon/feature2.webp" alt="feature"></figure>
+                            <h4>ENFOQUE IMPULSADO </h4>
+                            <p>Adoptar un enfoque impulsado por soluciones personalizadas es clave en el mercado actual.
+                                Esta estrategia permite a las empresas superar las expectativas del cliente, ofreciendo
+                                soluciones innovadoras y efectivas que aseguran ventaja y relevancia competitiva.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="header-card" data-aos="fade-up">
+                        <div>
+                            <figure><img src="Images/icon/feature3.webp" alt="feature"></figure>
+                            <h4>SOLUCIONES CREATIVAS</h4>
+                            <p>En el vibrante mundo de la impresión y composición, las soluciones creativas marcan la
+                                diferencia. Adoptar enfoques novedosos y creativos en nuestros proyectos no solo atrae
+                                la atención, sino que también establece nuevos estándares de excelencia y originalidad
+                                en la industria.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="header-card" data-aos="fade-down">
+                        <div>
+                            <figure><img src="Images/icon/feature4.webp" alt="feature"></figure>
+                            <h4>EQUIPO EXPERTO</h4>
+                            <p>En el dinámico sector de la impresión y composición, contar con un equipo experto es
+                                fundamental. Nuestro grupo de profesionales no solo posee conocimientos profundos, sino
+                                que también aplica su experiencia de manera innovadora para liderar y revolucionar la
+                                industria, estableciendo estándares elevados de calidad y eficiencia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== End of 1.3. card section ====== -->
+        <!-- ====== 1.5. About us section ====== -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-data flex-sb">
+                    <div class="w-50" data-aos="fade-up">
+                        <div class="flex about-title">
+                            <hr>
+                            <h5>SOBRE NOSOTROS</h5>
+                        </div>
+                        <h2>Explore nuestros servicios y aumente su presencia en línea </h2>
+                        <p>Explora nuestros servicios y potencia tu presencia en línea con nosotros. Desde nuestros
+                            inicios en la era de la tipografía manual hasta la moderna era digital, hemos mantenido
+                            nuestra esencia al brindar calidad y confiabilidad en cada proyecto. Nuestra experiencia
+                            centenaria no solo ha sobrevivido a los cambios tecnológicos, sino que nos ha posicionado
+                            como líderes en la industria, adaptándonos y evolucionando para satisfacer las demandas del
+                            mercado actual. Confía en nosotros para llevar tu negocio al siguiente nivel.
+                        </p>
+                        <div class="flex gap-1 mt-15">
+                            <i class="fa-solid fa-check"></i>
+                            <h5>Nuestra Historia
+                            </h5>
+                        </div>
+                        <div class="flex gap-1 mt-15">
+                            <i class="fa-solid fa-check"></i>
+                            <h5>Nuestro Compromiso</h5>
+                        </div>
+                        <div class="flex gap-2 mt-30">
+                            <a href="#service" class="btn_hover1">Empezar</a>
+                        </div>
+                    </div>
+                    <div class="about-imgs flex flex-center w-50" data-aos="fade-down">
+                        <div>
+                            <figure>
+                                <img src="Images/home/about-Photoroom.webp" alt="img">
+                            </figure>
+                        </div>
+                        <div class="ab-count flex flex-center">
+                            <div class="flex flex-center">
+                                <h2>4</h2>
+                                <h2>+</h2>
+                            </div>
+                            <p>de experiencia</p>
+                        </div>
+                        <div class="about-hr flex gap-1">
+                            <hr>
+                            <h6>René Kuhm</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== End of 1.5. About us section ====== -->
+        <!-- ====== 1.6. gallary section ====== -->
+        <section id="portfolio" class="portfolio">
+            <div class="portfolio-1">
+                <div class="container">
+                    <div class="portfo-center" data-aos="fade-up">
+                        <div class="w-50">
+                            <div class="flex gap-1">
+                                <hr class="gallary-hr1">
+                                <h5>PORTFOLIO</h5>
+                            </div>
+                            <h2 class="mt-15">Nuestros Trabajos en imagenes.</h2>
+                            <p>Explora la galería de nuestros proyectos más destacados y sumérgete en la calidad visual
+                                de nuestro trabajo. Cada imagen es un testimonio de la precisión, creatividad y pasión
+                                que imprimimos en todos nuestros encargos. Desde impresiones tradicionales hasta diseños
+                                digitales modernos, nuestras imágenes capturan la esencia de nuestra habilidad para
+                                transformar ideas en resultados visuales impactantes.
+                            </p>
+                        </div>
+                        <hr class="mt-30">
+                    </div>
+                </div>
+            </div>
+            <div class="gallary">
+                <div class="ga-bg"> </div>
+                <!-- overly -->
+                <span> </span>
+                <div class="container" data-aos="fade-up">
+                    <!-- Tab links -->
+                    <div class="tab mb-15">
+                        <button class="tablinks active" onclick="open_img(event, 'all')">ALL</button>
+                        <button class="tablinks" onclick="open_img(event, 'design')">DESIGN</button>
+                        <button class="tablinks" onclick="open_img(event, 'development')">DEVELOPMENT</button>
+                        <button class="tablinks" onclick="open_img(event, 'branding')">BRANDING</button>
+                        <button class="tablinks" onclick="open_img(event, 'ui_ux')">UI/UX</button>
+                        <button class="tablinks" onclick="open_img(event, 'markiting')">MARKETING</button>
+                        <button class="tablinks" onclick="open_img(event, 'seo')">SEO</button>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="all" class="tabcontent" style="display: block;">
+                        <div class="flex flex-center">
+                            <div class="flex w-100">
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-1.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-2.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-3.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-66">
+                                    <figure><img src="Images/home/all-gallary-4.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-5.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-6.webp" alt="sm_img"></figure>
+                                    <figure><img src="Images/home/all-gallary-7.webp" alt="sm_img"></figure>
+                                </div>
+                                <div class="w-66">
+                                    <figure><img src="Images/home/all-gallary-8.webp" alt="img"></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="design" class="tabcontent">
+                        <div class="flex flex-center">
+                            <div class="flex w-100">
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-3.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-1.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-7.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-1.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-2.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-4.webp" alt="img"></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="development" class="tabcontent">
+                        <div class="flex flex-center">
+                            <div class="flex w-100">
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-3.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-4.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-5.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-6.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-7.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-8.webp" alt="img"></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="branding" class="tabcontent">
+                        <div class="flex flex-center">
+                            <div class="flex w-100">
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-6.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-66">
+                                    <figure><img src="Images/home/all-gallary-8.webp" alt="img"></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ui_ux" class="tabcontent">
+                        <div class="flex flex-center">
+                            <div class="flex w-100">
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-3.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-66">
+                                    <figure><img src="Images/home/all-gallary-4.webp" alt="img"></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="markiting" class="tabcontent">
+                        <div class="flex flex-center">
+                            <div class="flex w-100">
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-1.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-66">
+                                    <figure><img src="Images/home/all-gallary-2.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-66">
+                                    <figure><img src="Images/home/all-gallary-3.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-4.webp" alt="img"></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="seo" class="tabcontent">
+                        <div class="flex flex-center">
+                            <div class="flex w-100">
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-4.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-5.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-7.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-66">
+                                    <figure><img src="Images/home/all-gallary-6.webp" alt="img"></figure>
+                                </div>
+                                <div class="w-33">
+                                    <figure><img src="Images/home/all-gallary-8.webp" alt="img"></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallary-hr flex gap-1 flex-end mt-15">
+                        <h6>Tecnodespegue</h6>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== End of 1.6. gallary section ====== -->
+        <!-- ====== 1.7. Services section ====== -->
+        <section id="service" class="service">
+            <div class="service-1">
+                <div class="container">
+                    <div class="service-data" data-aos="fade-down">
+                        <div class="w-66">
+                            <div class="flex gap-1">
+                                <hr class="service-hr1">
+                                <h5>servicios</h5>
+                            </div>
+                            <h2 class="mt-15">Servicios que ofrecemos</h2>
+                            <p class="mt-15">Descubre nuestra amplia gama de servicios diseñados para impulsar tu
+                                presencia en el mercado. Desde desarrollo web y diseño UI/UX hasta soluciones de diseño
+                                visual, cada servicio que ofrecemos está pensado para optimizar y enriquecer tu
+                                estrategia empresarial. Nuestro compromiso con la excelencia y la innovación garantiza
+                                que cada proyecto no solo cumpla, sino que supere tus expectativas.
+                            </p>
+                        </div>
+                        <hr class="mt-15 mb-15">
+                    </div>
+                    <div class="flex gap-1 mt-15 s-card">
+                        <div class="service-card" data-aos="fade-down">
+                            <figure><img src="Images/icon/slider1.webp" alt="slider1"></figure>
+                            <h3>UI/UX Design</h3>
+                            <p>En el corazón del diseño UI/UX, fusionamos funcionalidad y estética para crear
+                                experiencias de usuario memorables y efectivas. Nuestro enfoque se centra en entender
+                                profundamente las necesidades del usuario, lo que nos permite diseñar interfaces
+                                intuitivas que no solo lucen espectaculares sino que también mejoran la interacción y la
+                                satisfacción del usuario. Descubre cómo transformamos simples interacciones en jornadas
+                                visuales cautivadoras.
+                            </p>
+                            <a href="services.html">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="service-card" data-aos="fade-up">
+                            <figure><img src="Images/icon/slider2.webp" alt="slider2"></figure>
+                            <h3>DEVELOPMENT</h3>
+                            <p>En nuestro enfoque de desarrollo, integramos las últimas tecnologías con metodologías
+                                probadas para construir soluciones robustas y escalables. Nos especializamos en
+                                transformar los requisitos complejos en sistemas funcionales que impulsan la eficiencia
+                                y fomentan el crecimiento. Sumérgete en cómo nuestro expertise en desarrollo lleva las
+                                capacidades de tu negocio al siguiente nivel.
+                            </p>
+                            <a href="services.html">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="service-card" data-aos="fade-down">
+                            <figure><img src="Images/icon/slider3.webp" alt="slider3"></figure>
+                            <h3>Visual Design</h3>
+                            <p>Nuestro enfoque en el diseño visual se centra en la creación de soluciones estéticas que
+                                comunican y cautivan. Al combinar elementos visuales armoniosos con principios de diseño
+                                efectivos, transformamos ideas abstractas en obras visuales concretas que destacan en
+                                cualquier industria. Explora cómo nuestra pasión por el diseño visual eleva cada
+                                proyecto, asegurando que cada detalle no solo se vea bien, sino que también funcione a
+                                la perfección.
+                            </p>
+                            <a href="services.html">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== End of 1.7. Services section ====== -->
+        <!-- ====== 1.8. Experience section ====== -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="flex-wrap exp-center" data-aos="fade-up">
+                    <div class="w-66">
+                        <div class="flex gap-1">
+                            <hr class="experience-hr1 m-0">
+                            <h5>experiencia</h5>
+                        </div>
+                        <h2>Haga crecer su presencia en línea.</h2>
+                        <p class="mt-1">Impulse su presencia digital con nuestros servicios especializados. Desde
+                            soluciones de marketing digital hasta desarrollo web avanzado, proporcionamos todas las
+                            herramientas necesarias para que su marca no solo participe, sino que domine en el espacio
+                            online. Permita que nuestros expertos lo lleven al siguiente nivel con estrategias que
+                            convierten cada interacción en una oportunidad de crecimiento.
+                        </p>
+                    </div>
+                    <div class="w-33 mt-30 flex flex-end">
+                        <a href="#service" class="btn_hover1">Empezara>
+                    </div>
+                    <hr>
+                </div>
+                <div class="flex flex-sb">
+                    <div class="w-50 p-relative flex flex-center" data-aos="zoom-in">
+                        <div class="experience_mask">
+                            <figure><img src="Images/home/experience.webp" alt="img"></figure>
+                        </div>
+                        <div class="experience-hr flex gap-1">
+                            <hr>
+                            <h6> experiencia </h6>
+                        </div>
+                    </div>
+                    <div class="w-50 flex flex-col gap-2 mt-1">
+                        <div class="flex gap-1 ex-card" data-aos="fade-up">
+                            <div class="flex flex-center">
+                                <h3>100</h3>
+                                <h3>%</h3>
+                            </div>
+                            <div>
+                                <h4>Desarrollo web</h4>
+                                <p>Creamos sitios web dinámicos y adaptativos, optimizados para mejorar la usabilidad y
+                                    la visibilidad en línea, elevando la experiencia del usuario.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-1 ex-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="flex flex-center">
+                                <h3>99</h3>
+                                <h3>%</h3>
+                            </div>
+                            <div>
+                                <h4>SEO</h4>
+                                <p>Optimizamos su sitio web en todos los aspectos para mejorar su visibilidad y
+                                    posicionar su marca en las cimas de los motores de búsqueda.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-1 ex-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="flex flex-center">
+                                <h3>95</h3>
+                                <h3>%</h3>
+                            </div>
+                            <div>
+                                <h4>Estrategia de marca</h4>
+                                <p>Fortalezca su identidad de marca con estrategias que alinean su visión y valores,
+                                    transformando su presencia en el mercado.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== End of 1.8. Experience section ====== -->
+        <!-- ====== 1.9. How we work section ====== -->
+        <section id="work" class="work">
+            <div class="container position-relative">
+                <div class="work-para text-center" data-aos="fade-up">
+                    <h5>CÓMO TRABAJAMOS</h5>
+                    <h2 class="h2_margin">Nuestro proceso para obtener resultados</h2>
+                    <p>Nuestro proceso meticuloso combina análisis profundo, estrategia personalizada y ejecución
+                        precisa para asegurar resultados sobresalientes. Desde la comprensión inicial de sus necesidades
+                        hasta la implementación final y seguimiento, cada paso está diseñado para maximizar su éxito y
+                        satisfacción.
+                    </p>
+                </div>
+                <div class="work-hr flex gap-1">
+                    <hr>
+                    <h6>Tecnodespegue</h6>
+                </div>
+                <div class="work-line flex flex-center gap-1 flex-wrap p-relative">
+                    <div data-aos="zoom-in">
+                        <h2>01.</h2>
+                        <h4>Haga una cita</h4>
+                    </div>
+                    <div data-aos="zoom-in">
+                        <h2>02.</h2>
+                        <h4>Conozca a nuestro equipo</h4>
+                    </div>
+                    <div data-aos="zoom-in">
+                        <h2>03.</h2>
+                        <h4>Haga su consulta</h4>
+                    </div>
+                    <div data-aos="zoom-in">
+                        <h2>04.</h2>
+                        <h4>Inicie su proyecto</h4>
+                    </div>
+                </div>
+                <div class="flex flex-center" data-aos="zoom-in">
+                    <a href="#contact" class="btn_hover2">Contacta ahora</a>
+                </div>
+            </div>
+        </section>
+        <!-- ====== End of 1.9. How we work section ====== -->
+        <!-- ====== 1.10. team section ====== -->
+        <section id="team" class="team">
+            <div class="container">
+                <div class="flex team-center" data-aos="fade-up">
+                    <div class="w-66">
+                        <div class="flex gap-1">
+                            <hr class="team-hr1">
+                            <h5>nuestro equipo</h5>
+                        </div>
+                        <h2 class="mt-1">Conozca a nuestro equipo de profesionales.</h2>
+                        <p class="mt-1">Nos dedicamos a llevar sus sueños y su empresa al siguiente nivel.</p>
+                    </div>
+                    <div class="w-33 mt-15 flex flex-end">
+                        <a href="#team" class="btn_hover2">todos los miembros</a>
+                    </div>
+                </div>
+                <div class="team-img" data-aos="zoom-in">
+                    <img src="Images/slider/team-slider1-Photoroom.webp" alt="Avatar">
+                    <div class="overlay">
+                        <div class="overlay_text">
+                            <h3>René Kuhm</h3>
+                            <h4>FullStack Development</h4>
+                            <div class="flex flex-center gap-1">
+                                <a href="https://www.facebook.com/TecnoDespegueLive/"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="https://wa.me/5491123456789"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="https://www.instagram.com/tecnodespegue/"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-btn" data-aos="zoom-in">
+                <div class="container flex flex-sb gap-2 flex-wrap">
+                    <h4>Haga una pregunta a nuestro increíble equipo y obtenga una respuesta rápidamente.</h4>
+                    <a href="#contact" class="btn_hover2">Contacta ahora</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ====== End of 1.10. team section ====== -->
+        <!-- ====== 1.11. Pricing section ====== -->
+        <section id="pricing" class="pricing p-relative">
+            <span> </span>
+            <div class="pricing-hr flex gap-1">
+                <hr>
+                <h6>TECNODESPEGUE</h6>
+            </div>
+            <div class="container">
+                <div class="text-center" data-aos="fade-down">
+                    <h5>PRECIOS</h5>
+                    <h2 class="mt-1">PLAN DE PRECIOS</h2>
+                    <p class="mt-1 mb-15">Descubre nuestro versátil plan de precios, diseñado para ajustarse a las
+                        diversas necesidades y presupuestos de nuestros clientes. Desde opciones básicas hasta paquetes
+                        premium, cada plan está cuidadosamente estructurado para ofrecer el máximo valor, garantizando
+                        que encuentres exactamente lo que necesitas para prosperar en tu sector. Explora nuestras
+                        ofertas y elige la que mejor se adapte a tus objetivos y requisitos, sabiendo que estás
+                        invirtiendo en calidad y eficiencia.
+                    </p>
+                </div>
+                <div class="pricing-card flex gap-1 mt-3 text-center">
+                    <div class="flex flex-col gap-2" data-aos="fade-up">
+                        <h3>BÁSICO</h3>
+                        <h2>$40</h2>
+                        <h6>Auditorías SEO</h6>
+                        <h6>Gestiones SEO</h6>
+                        <h6>Publicidad digital</h6>
+                        <h6>Gestion del sitio</h6>
+                        <a href="#contact" class="btn_hover1">Empezar</a>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h3>STANDARD</h3>
+                        <h2>$70</h2>
+                        <h6>Auditorías SEO</h6>
+                        <h6>Gestiones SEO</h6>
+                        <h6>Publicidad digital</h6>
+                        <h6>Gestion del sitio</h6>
+                        <h6>Consultar</h6>
+                        <a href="#contact" class="btn_hover2">Empezar</a>
+                    </div>
+                    <div class="flex flex-col gap-2" data-aos="fade-down">
+                        <h3>PREMIUM</h3>
+                        <h2>$99</h2>
+                        <h6>Auditorías SEO Evaluativa</h6>
+                        <h6>SEO Gestion Estrategica</h6>
+                        <h6>Publicidad en Redes Sociales</h6>
+                        <h6>Analicis Competitivo</h6>
+                        <h6>Soporte Prioritario</h6>
+                        <a href="#contact" class="btn_hover1">Empezar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== End of 1.11. Pricing section ====== -->
+        <!-- ====== 1.12. FAQ section ====== -->
+        <section id="faq" class="faq p-relative">
+            <span> </span>
+            <div class="container">
+                <div class="flex flex-wrap">
+                    <div class="w-50 text-center" data-aos="fade-up">
+                        <div class="flex gap-2 ">
+                            <hr class="faq-hr1">
+                            <h5>FAQ</h5>
+                        </div>
+                        <h2 class="mt-1">Preguntas frecuentes</h2>
+                        <p class="mt-1">Nuestra sección de Preguntas Frecuentes está diseñada para ofrecerte respuestas
+                            rápidas y claras a las consultas más comunes sobre nuestros servicios y procesos. Aquí
+                            podrás encontrar información detallada que te ayudará a entender mejor cómo podemos apoyarte
+                            en alcanzar tus objetivos digitales. Desde dudas sobre nuestros planes de precios hasta
+                            especificaciones sobre la ejecución de estrategias de marketing digital, buscamos
+                            proporcionarte toda la información necesaria para que tomes decisiones informadas con
+                            confianza. Explora esta sección para aclarar tus preguntas y aprender más sobre cómo podemos
+                            ayudarte a crecer y prosperar en el competitivo mundo digital.
+                        </p>
+                    </div>
+                    <div class="w-50 mt-15">
+                        <div class="accordion flex flex-col gap-2" id="accordionExample" data-aos="fade-down">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button flex-sb" type="button">
+                                        ¿QUÉ TIPO DE SERVICIOS DIGITALES OFRECE
+                                        <img src="Images/icon/plus.webp" alt="img">
+                                    </button>
+                                </h2>
+                                <div class="accordion-collapse">
+                                    <p>Ofrecemos una amplia gama de servicios digitales diseñados para optimizar su
+                                        presencia en línea y maximizar el impacto de sus estrategias de marketing
+                                        digital. Nuestros servicios incluyen desarrollo web, SEO (optimización en
+                                        motores de búsqueda), gestión de redes sociales, marketing de contenido, y
+                                        publicidad digital. Cada servicio está personalizado para satisfacer las
+                                        necesidades específicas de nuestros clientes y está dirigido por un equipo de
+                                        expertos dedicados a asegurar resultados excepcionales. Estamos comprometidos a
+                                        ayudarle a alcanzar sus objetivos comerciales a través de soluciones innovadoras
+                                        y estrategias efectivas que impulsan el crecimiento y la visibilidad de su marca
+                                        en el mercado digital.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button flex-sb" type="button">
+                                        ¿CUÁL ES TU PROCESO PARA TRABAJAR CON CLIENTES?
+                                        <img src="Images/icon/plus.webp" alt="img">
+                                    </button>
+                                </h2>
+                                <div class="accordion-collapse">
+                                    <p>Nuestro proceso para trabajar con clientes es metódico y personalizado, diseñado
+                                        para garantizar la máxima satisfacción y resultados óptimos. Comienza con una
+                                        consulta inicial donde discutimos tus necesidades y objetivos. Seguidamente,
+                                        realizamos un análisis exhaustivo de tu situación actual y del mercado para
+                                        crear una estrategia a medida. Una vez acordado el plan, nuestros expertos
+                                        proceden a la implementación de las soluciones propuestas, asegurando una
+                                        ejecución fluida y eficiente. Durante todo el proceso, mantenemos una
+                                        comunicación constante para asegurarnos de que todas las acciones están
+                                        alineadas con tus expectativas. Finalmente, evaluamos el desempeño de la
+                                        estrategia implementada y hacemos ajustes según sea necesario para optimizar los
+                                        resultados continuos. Este enfoque colaborativo y transparente es fundamental
+                                        para construir relaciones duraderas y exitosas con nuestros clientes.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button flex-sb" type="button">
+                                        ¿CUÁL ES EL PLAZO PARA COMPLETAR UN PROYECTO?
+                                        <img src="Images/icon/plus.webp" alt="img">
+                                    </button>
+                                </h2>
+                                <div class="accordion-collapse">
+                                    <p>El plazo para completar un proyecto varía según la complejidad y el alcance del
+                                        mismo. Nos esforzamos por trabajar de manera eficiente mientras garantizamos los
+                                        más altos estándares de calidad. Generalmente, un proyecto puede tomar desde
+                                        unas pocas semanas para tareas más pequeñas, hasta varios meses para iniciativas
+                                        más complejas. Durante la consulta inicial, evaluaremos tus necesidades
+                                        específicas y proporcionaremos un cronograma estimado. Nuestro objetivo es
+                                        asegurar la transparencia y mantener una comunicación constante para que estés
+                                        informado en cada paso del proceso. Nos comprometemos a cumplir con los plazos
+                                        acordados, ajustando nuestras estrategias según sea necesario para entregar los
+                                        resultados esperados en el tiempo prometido.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button flex-sb" type="button">
+                                        ¿Y SI NO ESTOY SATISFECHO CON EL TRABAJO?
+                                        <img src="Images/icon/plus.webp" alt="img">
+                                    </button>
+                                </h2>
+                                <div class="accordion-collapse">
+                                    <p>Entendemos la importancia de satisfacer completamente las expectativas de
+                                        nuestros clientes. Si no estás satisfecho con el trabajo realizado, nos
+                                        comprometemos a abordar tus preocupaciones y realizar los ajustes necesarios.
+                                        Nuestro proceso incluye varias revisiones y puntos de control donde tus
+                                        comentarios son esenciales para guiarnos. Trabajaremos contigo para entender las
+                                        áreas de insatisfacción y aplicaremos las modificaciones requeridas para
+                                        asegurar que el resultado final cumpla con tus expectativas. Nuestra meta es
+                                        alcanzar tu completa satisfacción, y nos esforzamos por ofrecer soluciones que
+                                        no solo cumplan, sino que superen tus requerimientos iniciales.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== End of 1.12. FAQ section ====== -->
+        <!-- ====== 1.15. Footer section ====== -->
+        <footer>
+            <div class="container">
+                <div class="footer-hr flex flex-col">
+                    <div class="flex gap-1" data-aos="fade-left">
+                        <hr>
+                        <h6>BOLETIN</h6>
+                    </div>
+                    <h3>ÚNETE A NUESTRA LISTA DE CORREOS</h3>
+                    <p class="text-center">Suscríbete a nuestra lista de correos y mantente al día con las últimas
+                        noticias, actualizaciones y ofertas exclusivas de nuestra empresa. Al formar parte de nuestra
+                        comunidad, recibirás información valiosa directamente en tu bandeja de entrada, ayudándote a
+                        aprovechar al máximo nuestros servicios. ¡No te pierdas ninguna actualización, únete hoy!</p>
+                </div>
+                <form id="footer-form" class="flex flex-sb gap-2" data-aos="zoom-in" data-aos-delay="400">
+                    <input type="hidden" name="contact_number" value="697483">
+                    <label>Nombre</label>
+                    <input type="text" name="user_name">
+                    <label>Email</label>
+                    <input type="email" name="user_email">
+                    <label>Mensaje</label>
+                    <textarea name="message"></textarea>
+                    <input type="submit" value="enviar">
+                </form>
+            </div>
+            <div class="footer-menu">
+                <div class="container">
+                    <div class="flex flex-start footer-center">
+                        <div class="w-33 flex flex-col gap-0 flex-start">
+                            <a href="index.html"><img src="Images/Tecno2.webp" alt="footer-logo"></a>
+                            <p>En Tecnodespegue, transformamos ideas en soluciones web innovadoras que impulsan tu
+                                negocio.</p>
+                            <span class="flex gap-2">
+                                <a href="https://www.facebook.com/TecnoDespegueLive/"><i
+                                        class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/tecnodespegue/"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://twitter.com/REPARO22"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/in/ren%C3%A9-kuhm-1aa88818a/"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                            </span>
+                        </div>
+                        <div class="w-16 mt-1">
+                            <h4>Enlaces rápidos</h4>
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#portfolio">Portfolio</a></li>
+                                <li><a href="https://tecno-blog.com">Blogs</a></li>
+                            </ul>
+                        </div>
+                        <div class="w-16 mt-45 flex-end">
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li><a href="#faq">FAQ</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#team">Team</a></li>
+                            </ul>
+                        </div>
+                        <div id="contact" class="w-33 mt-1 flex flex-col flex-start">
+                            <h4>Contactame</h4>
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li>
+                                    <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                                    <a href="tel:+542334409838" class="text-lowercase">+54 2334-409838</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa-regular fa-envelope"></i></a>
+                                    <a href="mailto:tecnodespegue@outlook.com">tecnodespegue@outlook.com</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa-sharp fa-regular fa-clock"></i></a>
+                                    <a href="#">Eduardo Castex (LP) ARGENTINA</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container flex flex-sb gap-2 flex-wrap">
+                    <h6>Copyright © 2024 Tecnodespegue <a href="https://tecnodespegue.com/" class="p-0">
+                        </a> All Rights Reserved.
+                    </h6>
+                    <h6>Powered By <b> René Kuhm </b></h6>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- end site wrapper -->
+   <!-- button back to top -->
+<button onclick="scrollToTop()" id="backToTopBtn" class="btn_hover2"><i class="fa-solid fa-arrow-turn-up"></i></button>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+	  emailjs.init("service_qwt25jr");
+   })();
+</script>
+
+<script src="https://cdn.skypack.dev/aos@3.0.0-beta.6/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+<script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/js/script-min.js" is:inline></script>
+<script src="/js/main.js" is:inline></script>
+</body>
+</Layout>
