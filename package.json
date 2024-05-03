@@ -1,5 +1,5 @@
 {
-  "name":"traspaso-webhtml-astro",
+  "name": "traspaso-webhtml-astro",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,11 +7,16 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "mkdir -p dist/js",
+    "minify-js": "pnpm run prepare && uglifyjs public/js/*.js -o dist/js/main.min.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "astro": "^4.7.1",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.17.4"
   }
 }
